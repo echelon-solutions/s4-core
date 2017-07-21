@@ -1,0 +1,44 @@
+{
+  "name": "@echelon-solutions/s4-core",
+  "description": "The specification.cloud s4 core library.",
+  "version": "0.0.0",
+  "license": "MIT",
+  "author": {
+    "name": "Khalid Zoabi",
+    "email": "kzoabi@outlook.com",
+    "url": "https://github.com/khalidx"
+  },
+  "homepage": "https://github.com/echelon-solutions/s4-core",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/echelon-solutions/s4-core.git"
+  },
+  "bugs": {
+    "url": "https://github.com/echelon-solutions/s4-core/issues"
+  },
+  "keywords": [
+    "api",
+    "rest",
+    "services",
+    "aws",
+    "cloudformation",
+    "sam",
+    "serverless",
+    "cloud"
+  ],
+  "scripts": {
+    "dev": "nodemon",
+    "build": "tsc"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.82.0",
+    "lowdb": "^0.16.2"
+  },
+  "devDependencies": {
+    "@types/lowdb": "^0.15.0",
+    "@types/node": "^8.0.9",
+    "nodemon": "^1.11.0",
+    "ts-node": "^3.2.0",
+    "typescript": "^2.4.1"
+  }
+}
