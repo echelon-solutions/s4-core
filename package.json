@@ -31,12 +31,17 @@
     "build": "tsc"
   },
   "dependencies": {
+    "ajv": "^5.2.2",
     "aws-sdk": "^2.82.0",
-    "lowdb": "^0.16.2"
+    "lowdb": "^0.16.2",
+    "swagger-parser": "^3.4.1",
+    "yamljs": "^0.3.0"
   },
   "devDependencies": {
     "@types/lowdb": "^0.15.0",
     "@types/node": "^8.0.9",
+    "@types/swagger-parser": "^4.0.1",
+    "@types/yamljs": "^0.2.30",
     "nodemon": "^1.11.0",
     "ts-node": "^3.2.0",
     "typescript": "^2.4.1"
