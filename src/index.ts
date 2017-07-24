@@ -34,13 +34,7 @@ export class Component {
   }
 }
 
-// Development/testing
-
-let resources = new Array<Resource>()
-resources.push(new Resource('test-schema', ResourceType.schemas, 'test schema content', ContentType.JsonSchemaVersion4))
-resources.push(new Resource('test-spec', ResourceType.specifications, 'test spec content', ContentType.SwaggerVersion2))
-
-let component = new Component('new-api-2', resources)
+/* Usage:
 
 Promise
 .resolve()
@@ -53,3 +47,5 @@ Promise
 .catch(function (error) {
   console.error(error)
 })
+
+*/
