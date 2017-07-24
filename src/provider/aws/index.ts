@@ -109,22 +109,26 @@ export function deploy (component: Component): Promise<void> {
     if (!output || !output.StackResourceDetail || !output.StackResourceDetail.PhysicalResourceId) {
       throw new Error('No data received from AWS')
     }
-    return s3.putObject({
-      Body: component.resources[0].content, 
-      Bucket: output.StackResourceDetail.PhysicalResourceId, 
-      Key: ResourceType[component.resources[0].type] + '/' + component.resources[0].name 
-      // ServerSideEncryption: "AES256"
-      // Tagging: "key1=value1&key2=value2"
-    })
-    .promise()
+    let uploads: Array<Promise<S3.PutObjectOutput>> = []
+    for (let resource of component.resources) {
+      uploads.push(s3.putObject({
+        Body: resource.content, 
+        Bucket: output.StackResourceDetail.PhysicalResourceId, 
+        Key: ResourceType[resource.type] + '/' + resource.name 
+        // ServerSideEncryption: "AES256"
+        // Tagging: "key1=value1&key2=value2"
+      })
+      .promise())
+    }
+    return Promise.all(uploads)
   })
   .then(function (output) {
     console.log(output)
-    console.log('Item uploaded successfully.')
+    console.log('Items uploaded successfully.')
     return
   })
   .catch(function (error) {
     console.error(error)
-    throw new Error('Unable to deploy item.')
+    throw new Error('Unable to deploy items.')
   })
 }
