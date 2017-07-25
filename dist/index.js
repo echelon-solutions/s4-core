@@ -1,10 +1,5 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var ContentType;
-(function (ContentType) {
-    ContentType["SwaggerVersion2"] = "swagger.yaml;version=2";
-    ContentType["JsonSchemaVersion4"] = "jsonschema;version=4";
-})(ContentType = exports.ContentType || (exports.ContentType = {}));
 var ResourceType;
 (function (ResourceType) {
     ResourceType[ResourceType["schemas"] = 0] = "schemas";

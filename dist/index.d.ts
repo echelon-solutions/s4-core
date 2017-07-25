@@ -1,7 +1,4 @@
-export declare enum ContentType {
-    SwaggerVersion2 = "swagger.yaml;version=2",
-    JsonSchemaVersion4 = "jsonschema;version=4",
-}
+import { ContentType } from './content/handler';
 export declare enum ResourceType {
     schemas = 0,
     scenarios = 1,
