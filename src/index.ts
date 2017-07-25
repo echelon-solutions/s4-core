@@ -1,9 +1,4 @@
-import * as provider from './provider/aws'
-
-export enum ContentType {
-  SwaggerVersion2 = 'swagger.yaml;version=2',
-  JsonSchemaVersion4 = 'jsonschema;version=4'
-}
+import { ContentType } from './content/handler'
 
 export enum ResourceType {
   schemas,
